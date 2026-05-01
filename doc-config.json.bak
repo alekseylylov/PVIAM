@@ -1,0 +1,138 @@
+{
+  "documents": [
+    {
+      "id": "additional-materials",
+      "markdownSourcePath": "${basedir}/documentation/documents/additional-materials/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/additional-materials/md/resources/",
+      "info": {
+        "name": "Дополнительные материалы",
+        "description": "Раздел предназначен для дополнительных материалов к настоящему документу"
+      }
+    },
+    {
+      "id": "administration-guide",
+      "markdownSourcePath": "${basedir}/documentation/documents/administration-guide/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/administration-guide/md/resources/",
+      "info": {
+        "name": "Руководство по системному администрированию",
+        "description": "Раздел содержит материалы по системному администрированию"
+      }
+    },
+    {
+      "id": "architecture",
+      "markdownSourcePath": "${basedir}/documentation/documents/architecture/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/architecture/md/resources/",
+      "info": {
+        "name": "Детальная архитектура",
+        "description": "Раздел содержит материалы о детальной архитектуре сервиса аутентификации"
+      }
+    },
+    {
+      "id": "developer-guide",
+      "markdownSourcePath": "${basedir}/documentation/documents/developer-guide/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/developer-guide/md/resources/",
+      "info": {
+        "name": "Руководство прикладного разработчика",
+        "description": "Раздел содержит описание системных требований, подключения и конфигурирования"
+      }
+    },
+    {
+      "id": "installation-guide",
+      "markdownSourcePath": "${basedir}/documentation/documents/installation-guide/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/installation-guide/md/resources/"
+      "info": {
+        "name": "Руководство по установке",
+        "description": "Раздел содержит описание установки сервиса аутентификации"
+      }
+    },
+    {
+      "id": "operators-guide",
+      "markdownSourcePath": "${basedir}/documentation/documents/operators-guide/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/operators-guide/md/resources/",
+      "info": {
+        "name": "Руководство оператора",
+        "description": "Раздел содержит описание доступа к приложению, использование приложения оператором, параметры настройки, правила эксплуатации"
+      }
+    },
+    {
+      "id": "PMI",
+      "markdownSourcePath": "${basedir}/documentation/documents/pmi/md/index.md",
+      "info": {
+        "name": "Программа и методика испытаний",
+        "description": "Раздел содержит программу и методику испытаний"
+      }
+    },
+    {
+      "id": "ReleaseNotes",
+      "markdownSourcePath": "${basedir}/documentation/documents/ReleaseNotes/md/index.md",
+      "info": {
+        "name": "Примечания к выпущенным релизам",
+        "description": "Раздел содержит информацию о всех релизах сервиса аутентификации"
+      }
+    },
+    {
+      "id": "security-guide",
+      "markdownSourcePath": "${basedir}/documentation/documents/security-guide/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/security-guide/md/resources/",
+      "info": {
+        "name": "Руководство по безопасности",
+        "description": "Раздел содержит руководство по безопасности сервиса аутентификации, в котором перечислены рекомендации по безопасной работе сервиса"
+      }
+    },
+    {
+      "id": "configuration-module",
+      "markdownSourcePath": "${basedir}/documentation/documents/configuration-module/md/index.md",
+      "resourcesPath": "${basedir}/documentation/documents/configuration-module/md/resources/",
+      "info": {
+        "name": "Модули провайдеров аутентификации",
+        "description": "Модули провайдеров аутентификации"
+      }
+    },
+    {
+      "id": "terms-and-definition",
+      "markdownSourcePath": "${basedir}/documentation/documents/terms-and-definition/md/index.md",
+      "info": {
+        "name": "Термины и определения",
+        "description": "Раздел содержит термины о определения"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "groupName": "Общие документы",
+      "documents": [
+        "architecture",
+        "PMI",
+        "ReleaseNotes"
+      ]
+    },
+    {
+      "groupName": "Руководства",
+      "documents": [
+        "installation-guide",
+        "administration-guide",
+        "developer-guide",
+        "operators-guide",
+        "security-guide"
+      ]
+    },
+    {
+      "groupName": "Вспомогательные материалы к руководству по установке",
+      "documents": [
+        "additional-materials"
+      ]
+    },
+    {
+      "groupName": "Вспомогательные материалы к руководству по системному администрированию",
+      "documents": [
+        "additional-materials",
+      ]
+    },
+    {
+      "groupName": "Вспомогательные материалы к руководству прикладного разработчика",
+      "documents": [
+        "additional-materials"
+      ]
+    }
+  ]
+}

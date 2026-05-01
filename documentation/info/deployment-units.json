@@ -1,0 +1,513 @@
+{
+  "fileMetamodelVersion": "1.0.0",
+  "deploymentUnits": [
+    {
+      "uri": "/proxy",
+      "name": "IAM Proxy",
+      "description": "Прокси-сервер на базе Nginx+Lua с аутентификацией по Open ID Connect",
+      "environments": [
+        {
+          "name": "ALT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "RED_HAT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "KUBERNETES",
+          "version": "1.23"
+        },
+        {
+          "name": "OPENSHIFT",
+          "version": "4.7"
+        },
+        {
+          "name": "OPEN_JDK",
+          "version": "11"
+        }
+      ],
+      "providedInterfaces": [
+        {
+          "interfaceId": "proxying-https",
+          "protocol": {
+            "transportLayer": "TCP",
+            "applicationLayer": "HTTPS"
+          }
+        },
+        {
+          "interfaceId": "proxying-http",
+          "protocol": {
+            "transportLayer": "TCP",
+            "applicationLayer": "HTTP"
+          }
+        },
+        {
+          "interfaceId": "mobile-auth-api",
+          "protocol": {
+            "transportLayer": "TCP",
+            "applicationLayer": "HTTP"
+          }
+        },
+        {
+          "interfaceId": "oidc-auth-api",
+          "protocol": {
+            "transportLayer": "TCP",
+            "applicationLayer": "HTTP"
+          }
+        },
+        {
+          "interfaceId": "iamproxy-rest-api",
+          "protocol": {
+            "transportLayer": "TCP",
+            "applicationLayer": "HTTP"
+          }
+        }
+      ],
+      "possibleSetsOfDependencies": [
+        {
+          "dependencySetId": "without-dependency"
+        },
+        {
+          "dependencySetId": "with-kcse",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.IAM.KCSE",
+              "artifactId": "oidc-rest-api",
+              "version": "1.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-kcse-rdsserver",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "rdsserver-rest-api",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.IAM.KCSE",
+              "artifactId": "oidc-rest-api",
+              "version": "1.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-kcse-syslogng",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "syslog-udp",
+              "protocol": {
+                "transportLayer": "UDP"
+              }
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.IAM.KCSE",
+              "artifactId": "oidc-rest-api",
+              "version": "1.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-kcse-rdsserver-syslogng",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "rdsserver-rest-api",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "interfaceId": "syslog-udp",
+              "protocol": {
+                "transportLayer": "UDP"
+              }
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.IAM.KCSE",
+              "artifactId": "oidc-rest-api",
+              "version": "1.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-extidp",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "org.external",
+              "artifactId": "oidc-rest-api",
+              "version": "1.0",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-extidp-rdsserver",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "rdsserver-rest-api",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "org.external",
+              "artifactId": "oidc-rest-api",
+              "version": "1.0",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-extidp-syslogng",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "syslog-udp",
+              "protocol": {
+                "transportLayer": "UDP"
+              }
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "org.external",
+              "artifactId": "oidc-rest-api",
+              "version": "1.0",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-extidp-rdsserver-syslogng",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "rdsserver-rest-api",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "interfaceId": "syslog-udp",
+              "protocol": {
+                "transportLayer": "UDP"
+              }
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "org.external",
+              "artifactId": "oidc-rest-api",
+              "version": "1.0",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uri": "/rds-server",
+      "name": "RDS Server",
+      "description": "Route Discovery Service. Компонент для динамического управления конфигурацией Nginx.",
+      "environments": [
+        {
+          "name": "ALT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "RED_HAT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "KUBERNETES",
+          "version": "1.23"
+        },
+        {
+          "name": "OPENSHIFT",
+          "version": "4.7"
+        },
+        {
+          "name": "OPEN_JDK",
+          "version": "11"
+        }
+      ],
+      "providedInterfaces": [
+        {
+          "interfaceId": "rdsserver-rest-api",
+          "protocol": {
+            "transportLayer": "TCP",
+            "applicationLayer": "HTTP"
+          }
+        }
+      ],
+      "possibleSetsOfDependencies": [
+        {
+          "dependencySetId": "with-cfga",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-rest-api",
+              "version": "3.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-jdbc-api",
+              "version": "3.4.1",
+              "protocol": {
+                "transportLayer": "TCP"
+              }
+            },
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-from-file",
+              "version": "3.4.1"
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-audt",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.AUD.AUDT",
+              "artifactId": "audit-rest-api",
+              "version": "2.3",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "groupId": "sber.platform.AUD.AUDT",
+              "artifactId": "audit-kafka-api",
+              "version": "2.3",
+              "protocol": {
+                "transportLayer": "TCP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-cfga-audt",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-rest-api",
+              "version": "3.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-jdbc-api",
+              "version": "3.4.1",
+              "protocol": {
+                "transportLayer": "TCP"
+              }
+            },
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-from-file",
+              "version": "3.4.1"
+            },
+            {
+              "groupId": "sber.platform.AUD.AUDT",
+              "artifactId": "audit-rest-api",
+              "version": "2.3",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "groupId": "sber.platform.AUD.AUDT",
+              "artifactId": "audit-kafka-api",
+              "version": "2.3",
+              "protocol": {
+                "transportLayer": "TCP"
+              }
+            }
+          ]
+        },
+        {
+          "dependencySetId": "with-cfga-audt-aplj",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.CFG.CFGA",
+              "artifactId": "configuration-rest-api",
+              "version": "3.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "groupId": "sber.platform.AUD.AUDT",
+              "artifactId": "audit-rest-api",
+              "version": "2.3",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            },
+            {
+              "groupId": "sber.platform.DTL.APLJ",
+              "artifactId": "application-journal-rest-api",
+              "version": "4.2.2",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uri": "/syslog-ng",
+      "name": "Syslog-ng",
+      "description": "Сбор и отправка логов в Platform V Аудит",
+      "environments": [
+        {
+          "name": "ALT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "RED_HAT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "KUBERNETES",
+          "version": "1.23"
+        },
+        {
+          "name": "OPENSHIFT",
+          "version": "4.7"
+        },
+        {
+          "name": "OPEN_JDK",
+          "version": "8"
+        }
+      ],
+      "providedInterfaces": [
+        {
+          "interfaceId": "syslog-udp",
+          "protocol": {
+            "transportLayer": "UDP"
+          }
+        },
+        {
+          "interfaceId": "syslog-tcp-mtls",
+          "protocol": {
+            "transportLayer": "TCP"
+          }
+        }
+      ],
+      "possibleSetsOfDependencies": [
+        {
+          "dependencySetId": "with-audt",
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.AUD.AUDT",
+              "artifactId": "audit-kafka-api",
+              "version": "2.3",
+              "protocol": {
+                "transportLayer": "TCP"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uri": "/proxy/config-lb",
+      "name": "LB IAM",
+      "description": "Балансировщик нагрузки для сервисов IAM",
+      "environments": [
+        {
+          "name": "ALT_LINUX",
+          "version": "8"
+        },
+        {
+          "name": "RED_HAT_LINUX",
+          "version": "8"
+        }
+      ],
+      "providedInterfaces": [
+        {
+          "interfaceId": "loadbalancing-tcp-l4",
+          "protocol": {
+            "transportLayer": "TCP"
+          }
+        }
+      ],
+      "possibleSetsOfDependencies": [
+        {
+          "dependencySetId": "lb-proxy-kcse",
+          "requiredDeploymentUnitInterfaces": [
+            {
+              "interfaceId": "proxying-https"
+            }
+          ],
+          "requiredComponentInterfaces": [
+            {
+              "groupId": "sber.platform.IAM.KCSE",
+              "artifactId": "auth-ui-http",
+              "version": "1.4.1",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTP"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

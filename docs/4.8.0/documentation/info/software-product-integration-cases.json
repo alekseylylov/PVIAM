@@ -1,0 +1,156 @@
+{
+  "fileMetamodelVersion": "1.0.0",
+  "possibleIntegrationCases": [
+    {
+      "integrationCaseId": "full-installation",
+      "description": "Содержит компоненты IAM Proxy и KeyCloak SE. IAM Proxy наполнен сервисами по управлению конфигурацией прокси (Nginx), логирования и аудита. Не предусматривает автоматизированного переключения на StandIn-контур.",
+      "componentsInstances": [
+        {
+          "componentInstanceId": "IAM-Proxy",
+          "platformComponentCode": "AUTH",
+          "componentVersion": "4.3.4",
+          "providedComponentInterfaces": [
+            {
+              "groupId": "sber.platform.IAM.AUTH",
+              "artifactId": "proxying-https",
+              "version": "1.6.0",
+              "deploymentUnitProviderInstanceId": "iamproxy-instance",
+              "protocol": {
+                "transportLayer": "TCP",
+                "applicationLayer": "HTTPS"
+              }
+            }
+          ],
+          "deploymentUnitsInstances": [
+            {
+              "deploymentUnitInstanceId": "iamproxy-instance",
+              "deploymentUnitUri": "/proxy",
+              "dependencies": {
+                "dependencySetId": "with-kcse-syslogng",
+                "deploymentUnitInterfacesAndProviders": [
+                  {
+                    "deploymentUnitInstanceId": "lb-instance",
+                    "interface": {
+                      "interfaceId": "loadbalancing-tcp-l4",
+                      "protocol": {
+                        "transportLayer": "TCP"
+                      }
+                    }
+                  },
+                  {
+                    "deploymentUnitInstanceId": "syslogng-instance",
+                    "interface": {
+                      "interfaceId": "syslog-udp",
+                      "protocol": {
+                        "transportLayer": "UDP"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "deploymentUnitInstanceId": "syslogng-instance",
+              "deploymentUnitUri": "/syslog-ng",
+              "dependencies": {
+                "dependencySetId": "with-audt",
+                "platformComponentInterfacesAndProviders": [
+                  {
+                    "componentInstanceId": "audt",
+                    "interface": {
+                      "groupId": "sber.platform.AUD.AUDT",
+                      "artifactId": "audit-kafka-api",
+                      "version": "2.3",
+                      "protocol": {
+                        "transportLayer": "TCP"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "deploymentUnitInstanceId": "lb-instance",
+              "deploymentUnitUri": "/proxy/config-lb",
+              "dependencies": {
+                "dependencySetId": "lb-proxy-kcse",
+                "platformComponentInterfacesAndProviders": [
+                  {
+                    "componentInstanceId": "KCSE",
+                    "interface": {
+                      "groupId": "sber.platform.IAM.KCSE",
+                      "artifactId": "auth-ui-http",
+                      "version": "1.6.0",
+                      "protocol": {
+                        "transportLayer": "TCP",
+                        "applicationLayer": "HTTP"
+                      }
+                    }
+                  }
+                ],
+                "deploymentUnitInterfacesAndProviders": [
+                  {
+                    "deploymentUnitInstanceId": "proxy",
+                    "interface": {
+                      "interfaceId": "proxying-https"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "componentInstanceId": "KeyCloak-SE",
+          "platformComponentCode": "KCSE",
+          "componentVersion": "1.5.202",
+          "providedComponentInterfaces": [
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-audit-sender-rest",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            },
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-audit-sender",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            },
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-syslog",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            },
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-keycloak-identity-adapters",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            },
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-core",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            },
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-rest-module",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            },
+            {
+              "groupId": "ru.sbt.kcse.keycloak.se",
+              "artifactId": "kcse-vault",
+              "version": "1.6.204",
+              "deploymentUnitProviderInstanceId": "kcse"
+            }
+          ],
+          "deploymentUnitsInstances": []
+        }
+      ]
+    }
+  ]
+}

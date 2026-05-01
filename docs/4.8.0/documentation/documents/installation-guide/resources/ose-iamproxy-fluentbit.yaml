@@ -1,0 +1,332 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: volume-conf-fluent-bit-iamproxy-sidecar
+  labels:
+    app: iamproxy-test-fluent-bit
+data:
+  fluent-bit.conf: |-
+    [SERVICE]
+        Flush        1
+        Daemon       Off
+        Parsers_File parsers.conf
+        HTTP_Server  On
+        HTTP_Listen  0.0.0.0
+        HTTP_PORT    ${fluentbit_monitoring_port_number}
+    
+    @INCLUDE input_*.conf
+    
+    # Placeholders в секции [FILTER] подставляются значениями из переменных среды с соответствующими наименованиями
+    [FILTER]
+        Name    modify
+        Match   *
+        Add     standId ${stend_abbr}
+        Add     version ${deploy_platformauth_version}
+        Add     hostname ${HOSTNAME}
+    #    Add     moduleId ${moduleId}
+    #    Add     moduleVersion ${moduleVersion}
+    
+    [OUTPUT]
+        Name stdout
+        Match *
+        Format json_lines
+        json_date_format iso8601
+    
+    @INCLUDE output_*.conf
+
+  input_proxy.conf: |-
+    [INPUT]
+        Name              tail
+        Tag               proxy.access
+        Path              /var/log/logsshare/iamproxy-json-access*.log
+        Mem_Buf_Limit     32MB
+        Skip_Long_Lines   On
+        Refresh_Interval  5
+        Rotate_Wait       2
+        Read_from_Head    Off
+        DB                /var/log/fluent-bit/proxy-access.db
+        Parser            json_timestamp_unix
+    
+    [INPUT]
+        Name              tail
+        Tag               proxy.error
+        Path              /var/log/logsshare/iamproxy-error*.log
+        Mem_Buf_Limit     32MB
+        Skip_Long_Lines   On
+        Refresh_Interval  5
+        Rotate_Wait       2
+        Read_from_Head    Off
+        DB                /var/log/fluent-bit/proxy-error.db
+        Multiline         On
+        Parser_Firstline  nginx_error
+    
+    [INPUT]
+        Name              tail
+        Tag               proxy.trace
+        Path              /var/log/logsshare/iamproxy-trace-*.log
+        Mem_Buf_Limit     32MB
+        Skip_Long_Lines   On
+        Refresh_Interval  5
+        Rotate_Wait       2
+        Read_from_Head    Off
+        DB                /var/log/fluent-bit/proxy-trace.db
+        Parser            json_timestamp_unix
+    
+    [FILTER]
+        Name   modify
+        Match  proxy.*
+        Add    moduleId IAM.Proxy
+        Add    moduleVersion ${platformauth.proxy.version}
+    [FILTER]
+        Name   modify
+        Match  proxy.access
+        Add    type access
+    [FILTER]
+        Name   modify
+        Match  proxy.error
+        Add    type error
+    [FILTER]
+        Name   modify
+        Match  proxy.trace
+        Add    type trace
+
+  input_rds_client.conf: |-
+    [INPUT]
+        Name             tail
+        Tag              rds_client
+        Path             /var/log/logsshare/json*.log
+        Mem_Buf_Limit    32MB
+        Skip_Long_Lines  On
+        Refresh_Interval 5
+        Rotate_Wait      2
+        Read_from_Head   Off
+        DB               /var/log/fluent-bit/rds-client.db
+        Parser           json_timestamp_iso8601
+    
+    [FILTER]
+        Name    modify
+        Match   rds_client
+        Add     moduleId IAM.RDS-Client
+        Add     moduleVersion ${platformauth.rds-client.version}
+
+  output_kafka.conf: |-
+    [OUTPUT]
+        Name kafka
+        Match file.tail
+        Brokers ${kafka.bootstrap.servers}
+        Topics  ${topic_name}
+        rdkafka.security.protocol SSL
+        rdkafka.ssl.key.location         /etc/config/ssl/key.pem
+        rdkafka.ssl.certificate.location /etc/config/ssl/cert.pem
+        rdkafka.ssl.ca.location          /etc/config/ssl/cacerts.pem
+        rdkafka.sticky.partitioning.linger.ms 4000
+        rdkafka.queue.buffering.max.kbytes 5120
+
+  parsers.conf: |-
+    [PARSER]
+        Name        json_timestamp_unix
+        Format      json
+        Time_Key    timestamp
+        # время с начала эпохи в секундах
+        Time_Format %s.%L
+    
+    [PARSER]
+        Name        json_timestamp_iso8601
+        Format      json
+        Time_Key    timestamp
+        Time_Format %Y-%m-%dT%H:%M:%S.%L%z
+    
+    [PARSER]
+        Name        nginx_error
+        Format      regex
+        Regex       /^(?<timestamp>[\d\/]{10} [\d\:]{8}) \[(?<level>[a-zA-Z]+)\] (?<proc>\d+)#(?<subproc>\d+)\:( \*(?<thread>\d+))? (?<message>.*)/
+        Time_Key    timestamp
+        Time_Format %Y/%m/%d %H:%M:%S
+    
+    # ---- optional, and not used is now ----
+    [PARSER]
+        Name        nginx
+        Format      regex
+        Regex       ^(?<remote>[^ ]*) (?<host>[^ ]*) (?<user>[^ ]*) \[(?<time>[^\]]*)\] "(?<method>\S+)(?: +(?<path>[^\"]*?)(?: +\S*)?)?" (?<code>[^ ]*) (?<size>[^ ]*)(?: "(?<referer>[^\"]*)" "(?<agent>[^\"]*)")
+        Time_Key    timestamp
+        Time_Format %d/%b/%Y:%H:%M:%S %z
+    
+    [PARSER]
+        Name loggermod_head
+        Format regex
+        Regex ^(?<time>[^ ]* {1,2}[^ ]*) \[(?<threadName>[^ ]*)\] \[(?<levelStr>[^ ]*)\] \((?<loggerName>[^ ]*)\) \[(?<callerClass>[^:]*)\:\:(?<callerMethod>[^:]*)\:(?<callerLine>[^ ]*)\](\s+mdc:)(?<mdc>[^|]*)(\|\s+)(?<message>.*)
+        Time_Key time
+        Time_Format %Y-%m-%d %H:%M:%S,%L
+        Time_Keep On
+    
+    [PARSER]
+        Name loggermod
+        Format regex
+        Regex (?m-ix)^(?<time>[^ ]* {1,2}[^ ]*) \[(?<threadName>[^ ]*)\] \[(?<levelStr>[^ ]*)\] \((?<loggerName>[^ ]*)\) \[(?<callerClass>[^:]*)\:\:(?<callerMethod>[^:]*)\:(?<callerLine>[^ ]*)\](\s+mdc:)(?<mdc>[^|]*)(\|\s+)(?<message>.*)
+        Time_Key time
+        Time_Format %Y-%m-%d %H:%M:%S,%L
+        Time_Keep On
+    
+    [PARSER]
+        Name        syslog-rfc5424
+        Format      regex
+        Regex       ^\<(?<pri>[0-9]{1,5})\>1 (?<time>[^ ]+) (?<host>[^ ]+) (?<ident>[^ ]+) (?<pid>[-0-9]+) (?<msgid>[^ ]+) (?<extradata>(\[(.*?)\]|-)) (?<message>.+)$
+        Time_Key    time
+        Time_Format %Y-%m-%dT%H:%M:%S.%L%z
+        Time_Keep   On
+    
+    [PARSER]
+        Name        syslog-rfc3164
+        Format      regex
+        Regex       /^\<(?<pri>[0-9]+)\>(?<time>[^ ]* {1,2}[^ ]* [^ ]*) (?<host>[^ ]*) (?<ident>[a-zA-Z0-9_\/\.\-]*)(?:\[(?<pid>[0-9]+)\])?(?:[^\:]*\:)? *(?<message>.*)$/
+        Time_Key    time
+        Time_Format %b %d %H:%M:%S
+        Time_Keep   On
+    
+    [PARSER]
+        Name        json_serverEventDatetime
+        Format      json
+        Time_Key    serverEventDatetime
+        Time_Format %Y-%m-%dT%H:%M:%S.%L%z
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: conf-fluent-bit-iamproxy-sidecar
+  labels:
+    app: iamproxy-test-fluent-bit
+data:
+  fluentbit_monitoring_port_number: '8080'
+  stend_abbr: dev
+  deploy_platformauth_version: D-01.01.01
+  platformauth.proxy.version: 4.3.1
+  platformauth.rds-client.version: 4.2.0
+  kafka.bootstrap.servers: 10.0.50.1
+  topic_name: iamproxy
+
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: volume-kafka-cert
+  labels:
+    app: iamproxy-test-fluent-bit
+data:
+  cert.pem: >-
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUhLVENDQlJHZ0F3SUJBZ0lLR2drSGxBQUJBQUExRURBTkJna3Foa2lHOXcwQkFRc0ZBREJqTVJJd0VBWUsKQ1pJbWlaUHlMR1FCR1JZQ2NuVXhGREFTQmdvSmtpYUprL0lzWkFFWkZnUnpZbkptTVJJd0VBWUtDWkltaVpQeQpMR1FCR1JZQ1kyRXhJekFoQmdOVkJBTVRHbE5pWlhKaVlXNXJJRlJsYzNRZ1NYTnpkV2x1WnlCRFFTQXlNQjRYCkRURTVNRFV4TkRFek1qVTFObG9YRFRJek1EVXhOREV6TXpVMU5sb3dnYnd4Q3pBSkJnTlZCQVlUQWxKVk1SVXcKRXdZRFZRUUhFd3hFWldaaGRXeDBJRU5wZEhreEx6QXRCZ05WQkFvVEpsTmhkbWx1WjNNZ1FtRnVheUJ2WmlCMAphR1VnVW5WemMybGhiaUJHWldSbGNtRjBhVzl1TVEwd0N3WURWUVFMRXdRd01FTkJNU0V3SHdZRFZRUURFeGd3Ck1FTkJNREF3TVVOVFdVNUJVRk5GYzI1d09UbDFjM0l4TXpBeEJna3Foa2lHOXcwQkNRRVdKREF3UTBFd01EQXgKUTFOWlRrRlFVMFZ6Ym5BNU9YVnpja0J6WW1WeVltRnVheTV5ZFRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRApnZ0VQQURDQ0FRb0NnZ0VCQUpuVUNJdnVUMjlreSt1YzZpc2F4WWFlMXBFaHI3R3RxdEFSbHFySzNPcEdYT1hWClhTdm1lYWdxQ1R4c3UzaEVKeUZ4N25OTFRnNStpUnpiUlphOXRVYVlqZWQzTjdOQjIwM3RQL3ljNkFvUzN0WjgKSkpmZlBwa0xIc28zRWREVHhvYVNmZUtZUXRSbFhPNk11VkVxY2thS0NUZnpmZG5NUHFIR29GaGZSNjhEK0xWWAowQUlBeUloWGFncEk3RnFLZnhUUzRqQnR4ejR4eEJ4UzhkUVArOHVSWHRWa2VHZVhmMW9vU09IRHBWK3RHWWNGCnBaUW9NWHNLN2JYSUgzTDJJMnViT1hPQkJneFRxcVp6Z1c3Tkw5dG9CQnNGZUZEZkZvVzBuNTlod3JOUGxuTUYKTGRZenZBSElha2xSMkxlVnlBeHJ0TWpFall6OWtMN0xmY2xYQ25jQ0F3RUFBYU9DQW9Nd2dnSi9NQjBHQTFVZApEZ1FXQkJRQkNOeGdYRFh3OEt0eW01YmlQVEYrUkFuUUV6QWZCZ05WSFNNRUdEQVdnQlJSWCtxK0poNU5JRmk4Cmkwc2FyL1lGaktGMU1qQ0NBV3dHQTFVZEh3U0NBV013Z2dGZk1JSUJXNkNDQVZlZ2dnRlRoa1ZvZEhSd09pOHYKY0d0cExuTmlaWEppWVc1ckxuSjFMM0JyYVM5alpIQXZVMkpsY21KaGJtc2xNakJVWlhOMEpUSXdTWE56ZFdsdQpaeVV5TUVOQkpUSXdNaTVqY215R2djQnNaR0Z3T2k4dkwwTk9QVk5pWlhKaVlXNXJKVEl3VkdWemRDVXlNRWx6CmMzVnBibWNsTWpCRFFTVXlNRElzUTA0OVZGWXRRMFZTVkMxVlFpeERUajFEUkZBc1EwNDlVSFZpYkdsakpUSXcKUzJWNUpUSXdVMlZ5ZG1salpYTXNRMDQ5VTJWeWRtbGpaWE1zUkVNOVZXNWhkbUZwYkdGaWJHVkRiMjVtYVdkRQpUajlqWlhKMGFXWnBZMkYwWlZKbGRtOWpZWFJwYjI1TWFYTjBQMkpoYzJVL2IySnFaV04wUTJ4aGMzTTlZMUpNClJHbHpkSEpwWW5WMGFXOXVVRzlwYm5TR1IyaDBkSEE2THk5cGJuUndhMmt1WTJFdWMySnlaaTV5ZFM5d2Eya3YKWTJSd0wxTmlaWEppWVc1ckpUSXdWR1Z6ZENVeU1FbHpjM1ZwYm1jbE1qQkRRU1V5TURJdVkzSnNNSUcrQmdncgpCZ0VGQlFjQkFRU0JzVENCcmpCVUJnZ3JCZ0VGQlFjd0FvWklhSFIwY0RvdkwzQnJhUzV6WW1WeVltRnVheTV5CmRTOXdhMmt2WVdsaEwxTmlaWEppWVc1ckpUSXdWR1Z6ZENVeU1FbHpjM1ZwYm1jbE1qQkRRU1V5TURJb01Ta3UKWTNKME1GWUdDQ3NHQVFVRkJ6QUNoa3BvZEhSd09pOHZhVzUwY0d0cExtTmhMbk5pY21ZdWNuVXZjR3RwTDJGcApZUzlUWW1WeVltRnVheVV5TUZSbGMzUWxNakJKYzNOMWFXNW5KVEl3UTBFbE1qQXlLREVwTG1OeWREQU1CZ05WCkhSTUJBZjhFQWpBQU1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQ0FRQmlrZ0lnUlJwWDAyZnVaWUN4Vzc1bzRvVzMKbzZIdUV3TEJEWHdzekRNVnNiSHVjMkFXZENieHRaOFV6U25vdDh1T0VmVVhwMVNyL29kNlZGdnRUTWE5aitrVApGRHlHV2VsMGVMeTdEZFFYQkkrUm0weWd3YldRZGh1ZHF2L3pXT1ZybVhhSVRBbXRtaDhDVjE4QVVXY3hOZENoCm9Qdm10ZnB5cEZEUUNJWU5UQzlTNHJVZTJPSzdoU0ZyZHhqNnZpbjl4WUdzMmF2VXBlQVBXNE9BbG5KTGpCMk0KYjVOL293b1FlVzhSVFlvelpqcFh4aTdlV3RieDVHYk1pRXAzcmgzdTdUU0Yyc3hWRjNMaVIwdTU4MXVjbGtiSQoxYjN2bUowMjdVcFhidWVLbnNWcGNMdkpIOFhRMUw5WGxWOW1kRk43alRwaDBYb2VRMHpWbDlNNitlOWRBYUt4CmtiRzdXeGpPK3BYbEdDRmN6dDN6UnFzNGtaSkV6Rm9oalYwZnVwNTg2djZBVHZnTG8wdVpra0xCZm5LSjEzUFcKWGRsWEMrTTQydUVaZlA1L0JRZlN2MFBaUHNkZnF1ck9IRzhCRCtUOEM2eEpyVDlDN3M4T1dCTGMvSUhubHJYRQpab2JTSW9CTGZUMUR0a3lVODVtTitGem1ScjlOdGlJSGIyRHhGWXlsTEg1VkxxMDhEeWVIZm9rbEIzVUFuV0h0CkU2TSs5c1lCampYWnlseDVVWWhrOVdSQWw2RU1wVVdjVlJiWUxKdHM5L2pWdHZ4Qkg3aksxTjFZZHVkemFOZ1QKaUtDSDdBQmhEYmxLZVBRRUZYdkEzTzdnUnVjNFlEbUJDcTk2SHZuVFJ4QjJFYk5TUDVsZ2dXU0xJc3ByNGlMNQovM3BTMm9iTkkxK2xxRnJmalE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  #ниже ключ битый, и нужно будет его заменить на свой из своего сертификата
+  key.pem: >-
+    LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBbWRRSWkrNVBiMlRMNjV6cUt4ckZocDdXa1NHdnNhMnEwQkdXcXNyYzZrWmM1ZFZkCi4uLg0KLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K
+  cacerts.pem: >-
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUhLVENDQlJHZ0F3SUJBZ0lLR2drSGxBQUJBQUExRURBTkJna3Foa2lHOXcwQkFRc0ZBREJqTVJJd0VBWUsKQ1pJbWlaUHlMR1FCR1JZQ2NuVXhGREFTQmdvSmtpYUprL0lzWkFFWkZnUnpZbkptTVJJd0VBWUtDWkltaVpQeQpMR1FCR1JZQ1kyRXhJekFoQmdOVkJBTVRHbE5pWlhKaVlXNXJJRlJsYzNRZ1NYTnpkV2x1WnlCRFFTQXlNQjRYCkRURTVNRFV4TkRFek1qVTFObG9YRFRJek1EVXhOREV6TXpVMU5sb3dnYnd4Q3pBSkJnTlZCQVlUQWxKVk1SVXcKRXdZRFZRUUhFd3hFWldaaGRXeDBJRU5wZEhreEx6QXRCZ05WQkFvVEpsTmhkbWx1WjNNZ1FtRnVheUJ2WmlCMAphR1VnVW5WemMybGhiaUJHWldSbGNtRjBhVzl1TVEwd0N3WURWUVFMRXdRd01FTkJNU0V3SHdZRFZRUURFeGd3Ck1FTkJNREF3TVVOVFdVNUJVRk5GYzI1d09UbDFjM0l4TXpBeEJna3Foa2lHOXcwQkNRRVdKREF3UTBFd01EQXgKUTFOWlRrRlFVMFZ6Ym5BNU9YVnpja0J6WW1WeVltRnVheTV5ZFRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRApnZ0VQQURDQ0FRb0NnZ0VCQUpuVUNJdnVUMjlreSt1YzZpc2F4WWFlMXBFaHI3R3RxdEFSbHFySzNPcEdYT1hWClhTdm1lYWdxQ1R4c3UzaEVKeUZ4N25OTFRnNStpUnpiUlphOXRVYVlqZWQzTjdOQjIwM3RQL3ljNkFvUzN0WjgKSkpmZlBwa0xIc28zRWREVHhvYVNmZUtZUXRSbFhPNk11VkVxY2thS0NUZnpmZG5NUHFIR29GaGZSNjhEK0xWWAowQUlBeUloWGFncEk3RnFLZnhUUzRqQnR4ejR4eEJ4UzhkUVArOHVSWHRWa2VHZVhmMW9vU09IRHBWK3RHWWNGCnBaUW9NWHNLN2JYSUgzTDJJMnViT1hPQkJneFRxcVp6Z1c3Tkw5dG9CQnNGZUZEZkZvVzBuNTlod3JOUGxuTUYKTGRZenZBSElha2xSMkxlVnlBeHJ0TWpFall6OWtMN0xmY2xYQ25jQ0F3RUFBYU9DQW9Nd2dnSi9NQjBHQTFVZApEZ1FXQkJRQkNOeGdYRFh3OEt0eW01YmlQVEYrUkFuUUV6QWZCZ05WSFNNRUdEQVdnQlJSWCtxK0poNU5JRmk4Cmkwc2FyL1lGaktGMU1qQ0NBV3dHQTFVZEh3U0NBV013Z2dGZk1JSUJXNkNDQVZlZ2dnRlRoa1ZvZEhSd09pOHYKY0d0cExuTmlaWEppWVc1ckxuSjFMM0JyYVM5alpIQXZVMkpsY21KaGJtc2xNakJVWlhOMEpUSXdTWE56ZFdsdQpaeVV5TUVOQkpUSXdNaTVqY215R2djQnNaR0Z3T2k4dkwwTk9QVk5pWlhKaVlXNXJKVEl3VkdWemRDVXlNRWx6CmMzVnBibWNsTWpCRFFTVXlNRElzUTA0OVZGWXRRMFZTVkMxVlFpeERUajFEUkZBc1EwNDlVSFZpYkdsakpUSXcKUzJWNUpUSXdVMlZ5ZG1salpYTXNRMDQ5VTJWeWRtbGpaWE1zUkVNOVZXNWhkbUZwYkdGaWJHVkRiMjVtYVdkRQpUajlqWlhKMGFXWnBZMkYwWlZKbGRtOWpZWFJwYjI1TWFYTjBQMkpoYzJVL2IySnFaV04wUTJ4aGMzTTlZMUpNClJHbHpkSEpwWW5WMGFXOXVVRzlwYm5TR1IyaDBkSEE2THk5cGJuUndhMmt1WTJFdWMySnlaaTV5ZFM5d2Eya3YKWTJSd0wxTmlaWEppWVc1ckpUSXdWR1Z6ZENVeU1FbHpjM1ZwYm1jbE1qQkRRU1V5TURJdVkzSnNNSUcrQmdncgpCZ0VGQlFjQkFRU0JzVENCcmpCVUJnZ3JCZ0VGQlFjd0FvWklhSFIwY0RvdkwzQnJhUzV6WW1WeVltRnVheTV5CmRTOXdhMmt2WVdsaEwxTmlaWEppWVc1ckpUSXdWR1Z6ZENVeU1FbHpjM1ZwYm1jbE1qQkRRU1V5TURJb01Ta3UKWTNKME1GWUdDQ3NHQVFVRkJ6QUNoa3BvZEhSd09pOHZhVzUwY0d0cExtTmhMbk5pY21ZdWNuVXZjR3RwTDJGcApZUzlUWW1WeVltRnVheVV5TUZSbGMzUWxNakJKYzNOMWFXNW5KVEl3UTBFbE1qQXlLREVwTG1OeWREQU1CZ05WCkhSTUJBZjhFQWpBQU1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQ0FRQmlrZ0lnUlJwWDAyZnVaWUN4Vzc1bzRvVzMKbzZIdUV3TEJEWHdzekRNVnNiSHVjMkFXZENieHRaOFV6U25vdDh1T0VmVVhwMVNyL29kNlZGdnRUTWE5aitrVApGRHlHV2VsMGVMeTdEZFFYQkkrUm0weWd3YldRZGh1ZHF2L3pXT1ZybVhhSVRBbXRtaDhDVjE4QVVXY3hOZENoCm9Qdm10ZnB5cEZEUUNJWU5UQzlTNHJVZTJPSzdoU0ZyZHhqNnZpbjl4WUdzMmF2VXBlQVBXNE9BbG5KTGpCMk0KYjVOL293b1FlVzhSVFlvelpqcFh4aTdlV3RieDVHYk1pRXAzcmgzdTdUU0Yyc3hWRjNMaVIwdTU4MXVjbGtiSQoxYjN2bUowMjdVcFhidWVLbnNWcGNMdkpIOFhRMUw5WGxWOW1kRk43alRwaDBYb2VRMHpWbDlNNitlOWRBYUt4CmtiRzdXeGpPK3BYbEdDRmN6dDN6UnFzNGtaSkV6Rm9oalYwZnVwNTg2djZBVHZnTG8wdVpra0xCZm5LSjEzUFcKWGRsWEMrTTQydUVaZlA1L0JRZlN2MFBaUHNkZnF1ck9IRzhCRCtUOEM2eEpyVDlDN3M4T1dCTGMvSUhubHJYRQpab2JTSW9CTGZUMUR0a3lVODVtTitGem1ScjlOdGlJSGIyRHhGWXlsTEg1VkxxMDhEeWVIZm9rbEIzVUFuV0h0CkU2TSs5c1lCampYWnlseDVVWWhrOVdSQWw2RU1wVVdjVlJiWUxKdHM5L2pWdHZ4Qkg3aksxTjFZZHVkemFOZ1QKaUtDSDdBQmhEYmxLZVBRRUZYdkEzTzdnUnVjNFlEbUJDcTk2SHZuVFJ4QjJFYk5TUDVsZ2dXU0xJc3ByNGlMNQovM3BTMm9iTkkxK2xxRnJmalE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+type: Opaque
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: iamproxy-test5-alt2
+  labels:
+    app: iamproxy-test-fluent-bit
+spec:
+  selector:
+    matchLabels:
+      app: iamproxy-test-fluent-bit
+  template:
+    metadata:
+      labels:
+        app: iamproxy-test-fluent-bit
+    spec:
+      volumes:
+        - name: tmp
+          emptyDir:
+            medium: Memory
+        - name: volume-logsshare
+          emptyDir: { }
+        - name: volume-fluent-bit-log
+          emptyDir: { }
+        - name: volume-conf-fluent-bit-iamproxy-sidecar
+          configMap:
+            name: volume-conf-fluent-bit-iamproxy-sidecar
+        - name: volume-kafka-cert
+          secret:
+            secretName: volume-kafka-cert
+            defaultMode: 0400
+
+      containers:
+        - resources:
+            limits:
+              cpu: '1'
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+          name: iamproxy-test5-alt2
+          env:
+            - name: DEBUG
+              value: '1'
+            - name: KEYCLOAK_FRONT_DNS_NAME
+              value: platformauth-devb.mycompany.ru
+            - name: KEYCLOAK_HTTPS_PORT_ON_FRONTEND
+              value: '443'
+            - name: OIDC_SSL_VERIFY
+              value: 'False'
+            - name: PROXY_DNSNAME
+              value: iamproxy.mycompany.ru
+            - name: PROXY_OIDC_CLIENT_ID
+              value: PlatformAuth-Proxy
+            - name: PROXY_OIDC_CLIENT_SECRET
+              value: xJa2Z8UlK7Z0eV0JfPo1K9HBToLVMcN8
+            - name: STEND_TYPE
+              value: dev
+            - name: PROXY_LOG_TO_FLUENT_BIT_ENABLE
+              value: 'True'
+          ports:
+            - containerPort: 10080
+              protocol: TCP
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8443
+              protocol: TCP
+            - containerPort: 8444
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp/platformauth-proxy
+            - mountPath: /var/log/logsshare
+              name: volume-logsshare
+          image: >-
+            mycompany.sw.sbc.space/mycompany_dev/ci90000019_iamproxy_dev/platformauth-proxy@sha256:5b107927113b6d784f1c5d4d6978404d9d39f8698a428da26883bb426251e74c
+          securityContext:
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+
+        - name: fluent-bit-sidecar
+          image: >-
+            mycompany.sw.sbc.space/mycompany_dev/ci90000016_kintsugi_dev/external/fluent-bit@sha256:e38955b3495fe6a40b0506326c1d8458e2f03ad67747406af75f3719678b6036
+          resources:
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          env:
+            - name: podname
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          envFrom:
+            - configMapRef:
+                name: conf-fluent-bit-iamproxy-sidecar
+          volumeMounts:
+            - mountPath: '/tmp/fluent-bit'
+              name: volume-conf-fluent-bit-iamproxy-sidecar
+            - mountPath: '/etc/config/ssl'
+              name: volume-kafka-cert
+            - mountPath: '/var/log/fluent-bit'
+              name: volume-fluent-bit-log
+            - mountPath: '/var/log/logsshare'
+              name: volume-logsshare
+          securityContext:
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+

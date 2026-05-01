@@ -1,0 +1,39 @@
+$schema: doc.schema.json
+# Актуальная схема здесь:
+#$schema: https://portal.works.prod.sbt/ssd/tools/sc/docdev/a-schemas/src/branch/std2-v2.0/doc.schema.json
+
+sberproject_release_id: IAM.349
+archive_group_id: sbt_PROD.CI90000018_iam
+code: IAM
+version: 4.8.0
+
+#name: Platform V IAM
+#description: >
+#  Platform V IAM (Identity & Access Management) — набор инструментов для управления доступом к информационным ресурсам.
+#  Проверяет права доступа на вызовы API и совершение действий сервисом.
+#  Состоит из взаимно интегрированных сервисов: Keycloak SE и IAM Proxy
+
+#additional_doc_groups:
+#  - name: "Документация на компонент IAM Proxy"
+#    groups:
+#      - name: "Общие документы"
+#        slug: common-documents-auth
+#        documents:
+#          - iam-proxy-documents/documentation/documents/about
+#          - iam-proxy-documents/documentation/documents/architecture
+#          - iam-proxy-documents/documentation/documents/deployment-diagrams
+#          - iam-proxy-documents/documentation/documents/glossary
+#          - iam-proxy-documents/documentation/documents/pmi
+#          - iam-proxy-documents/documentation/documents/release-notes
+#      - name: "Руководства"
+#        slug: guides-auth
+#        documents:
+#          - iam-proxy-documents/documentation/documents/administration-guide
+#          - iam-proxy-documents/documentation/documents/developer-guide-AUTH
+#          - iam-proxy-documents/documentation/documents/installation-guide
+#          - iam-proxy-documents/documentation/documents/security-guide
+#      - name: "Дополнительные материалы"
+#        slug: additional-materials-auth
+#        documents:
+#          - iam-proxy-documents/documentation/documents/additional-materials
+#          - iam-proxy-documents/documentation/documents/changes

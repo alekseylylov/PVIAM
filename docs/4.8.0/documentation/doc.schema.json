@@ -1,0 +1,227 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "sbt_doc.schema.json",
+  "title": "Схема конфигурации для комплекта документов",
+  "type": "object",
+  "properties": {
+    "exclude_patterns": {
+      "description": "Список путей для исключения из сборки",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "description": "Путь к папке или файлу. Поддерживаются glob выражения.",
+        "type": "string"
+      }
+    },
+    "substitutions": {
+      "description": "Переменные для подстановки в тексте",
+      "$ref": "#/$defs/substitutions"
+    },
+    "fstec": {
+      "description": "Переменные ФСТЭК для подстановки в тексте",
+      "$ref": "#/$defs/substitutions"
+    },
+    "archive_group_id": {
+      "description": "group_id для загрузки архива с документацией в Nexus CD",
+      "type": "string",
+      "pattern": "^\\S+$"
+    },
+    "additional_doc_groups": {
+      "description": "Список групп с дополнительными документами",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    },
+    "apis": {
+      "description": "Перечисление API-спецификаций, которые создаются в папке /apis",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "description": "Тип API",
+            "type": "string",
+            "enum": [
+              "GRAPH_QL",
+              "GRPC",
+              "JAVA",
+              "JSON_RPC",
+              "KAFKA",
+              "MQ",
+              "OTHER",
+              "REST"
+            ]
+          },
+          "name": {
+            "description": "Название API",
+            "type": "string"
+          },
+          "description": {
+            "description": "Краткое описание",
+            "type": "string"
+          },
+          "component_code": {
+            "description": "Код компонента, в котором реализовано API",
+            "type": "string"
+          },
+          "component_version": {
+            "description": "Версия компонента, в котором реализовано API",
+            "type": "string"
+          },
+          "gav": {
+            "description": "Уникальный составной идентификатор версии API",
+            "type": "object",
+            "properties": {
+              "group_id": {
+                "type": "string"
+              },
+              "artifact_id": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "classifier": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "group_id",
+              "artifact_id",
+              "version"
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "name",
+          "description",
+          "component_code",
+          "gav"
+        ]
+      }
+    },
+    "code": {
+      "description": "Код собираемого продукта/компонента",
+      "type": "string"
+    },
+    "version": {
+      "description": "Версия собираемого продукта/компонента",
+      "type": "string"
+    },
+    "name": {
+      "description": "Название собираемого продукта/компонента",
+      "type": "string"
+    },
+    "sberproject_release_id": {
+      "description": "Внутренний идентификатор релиза в СберПроджекте",
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]{1,2}\\.\\d+$"
+    },
+    "previous_sberproject_release_id": {
+      "description": "Внутренний идентификатор предыдущего релиза в СберПроджекте",
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]{1,2}\\.\\d+$"
+    }
+  },
+  "$defs": {
+    "substitutions": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z][a-zA-Z0-9_]*$": {
+          "oneOf": [
+            {
+              "type": [
+                "string",
+                "integer"
+              ]
+            },
+            {
+              "$ref": "#/$defs/substitutions"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "group": {
+      "description": "Описание корневой группы с дополнительными документами",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Название группы",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Приоритет группы для отображения в содержании (по умолчанию 1000)",
+          "type": "integer"
+        },
+        "documents": {
+          "description": "Список документов",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "description": "Путь к папке с документом (либо путь напрямую к index.md документа). Поддерживаются glob выражения.",
+            "type": "string"
+          }
+        },
+        "groups": {
+          "description": "Список групп с дополнительными документами",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/subgroup"
+          }
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "documents"
+          ]
+        },
+        {
+          "required": [
+            "groups"
+          ]
+        }
+      ]
+    },
+    "subgroup": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/group"
+        }
+      ],
+      "description": "Описание подгруппы с дополнительными документами",
+      "type": "object",
+      "properties": {
+        "slug": {
+          "description": "Идентификатор группы для URL. Если не указан, то будет использоваться транслитерированное имя группы.",
+          "type": "string",
+          "pattern": "^[a-z][a-z\\-]+$"
+        }
+      }
+    }
+  },
+  "required": [
+    "archive_group_id"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "sberproject_release_id"
+      ]
+    },
+    {
+      "required": [
+        "code",
+        "version"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "release_id": "IAM.349",
+  "product_name": "Platform V IAM SE",
+  "product_code": "IAM",
+  "release_name": "Platform V IAM SE 4.8.0",
+  "version_number": "4.8.0",
+  "components": [
+    {
+      "id": "7595485630757339137",
+      "code": "AUTH",
+      "version": "4.8.0",
+      "product": {
+        "id": "IAM",
+        "name": "Platform V IAM SE"
+      },
+      "product_release_id": "IAM.349",
+      "name": "IAM Proxy"
+    }
+  ],
+  "scope": {
+    "IAM": {
+      "name": "Platform V IAM SE",
+      "changes": [
+        {
+          "id": "7595485343233212443",
+          "key": "CRPV-106189",
+          "name": "[PV IAM] [AUTH] Новая версия SynGX 3.5.0",
+          "task_kind": "evolution",
+          "issue_type": "Epic",
+          "link": "https://dzo.sw.sbc.space/jira/browse/CRPV-106189",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": "CRPLTFRM-33623",
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "jira"
+        },
+        {
+          "id": "7595485519326871553",
+          "key": "CRPV-31264",
+          "name": "[PV IAM] [AUTH] Отказ от RDS-сервера",
+          "task_kind": "evolution",
+          "issue_type": "epic_crpv",
+          "link": "https://portal.works.prod.sbt/swtr/units/current/unit/CRPV-31264",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": "CRPLTFRM-24662",
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "tasktracker"
+        },
+        {
+          "id": "7621490732162285576",
+          "key": "STS-193376",
+          "name": "[AUTH] IAM | Устранить нарушение требования ONP-6 стандарта STD-22 v3.01 в версии 2.3.0-11",
+          "task_kind": "bug",
+          "issue_type": "Sub-task",
+          "link": "https://sberworks.ru/jira/browse/STS-193376",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "jira"
+        }
+      ],
+      "bugs": [
+        {
+          "id": "7618869725501325317",
+          "key": "SBTSUPPORT - 32548",
+          "name": "[PV IAM] [AUTH] Несоответствие РМ привелигированных УЗ на ИП IAM Proxy",
+          "task_kind": "bug",
+          "issue_type": null,
+          "link": "https://support.sbertech.ru/sd/operator/#uuid:serviceCall$59053043",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": "SBTSUPPORT-70529",
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "sberproject"
+        },
+        {
+          "id": "7618135746600501254",
+          "key": "SBTSUPPORT - 32611",
+          "name": "[PV IAM] [AUTH] [RSKT00991986] Compl МпР1 Несоответствие стандарту конфигурирования RHEL\\Sberlinux - permissions_home",
+          "task_kind": "evolution",
+          "issue_type": null,
+          "link": "https://support.sbertech.ru/sd/operator/#uuid:serviceCall$59105506",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": "SBTSUPPORT-70585",
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "sberproject"
+        },
+        {
+          "id": "7595485343233212441",
+          "key": "STS-194371",
+          "name": "Дефект: 1Q26. УКЗ. Использование в k8s отдельного контейнера для формирования файлов конфигурации IAM Proxy",
+          "task_kind": "bug",
+          "issue_type": "bug_sts",
+          "link": "https://portal.works.prod.sbt/swtr/units/current/unit/STS-194371",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": "ПО / Software",
+          "source": "tasktracker"
+        },
+        {
+          "id": "7595485519326871555",
+          "key": "STS-194376",
+          "name": "Дефекты, исправляемые в 4.8.0",
+          "task_kind": "bug",
+          "issue_type": "bug_sts",
+          "link": "https://portal.works.prod.sbt/swtr/units/current/unit/STS-194376",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": "ПО / Software",
+          "source": "tasktracker"
+        },
+        {
+          "id": "7595485343233212439",
+          "key": "STS-169452",
+          "name": "[AUTH] Исключить возможность выпуска самоподписанных сертификатов во время старта приложения (init.sh)",
+          "task_kind": "bug",
+          "issue_type": "bug_kb_sts",
+          "link": "https://portal.works.prod.sbt/swtr/units/current/unit/STS-169452",
+          "components": null,
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "tasktracker"
+        },
+        {
+          "id": "7595485343233212437",
+          "key": "STS-169453",
+          "name": "[AUTH] Нарушение правила OR-1 STD-22 v3.01",
+          "task_kind": "bug",
+          "issue_type": "bug_kb_sts",
+          "link": "https://portal.works.prod.sbt/swtr/units/current/unit/STS-169453",
+          "components": null,
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "tasktracker"
+        },
+        {
+          "id": "7595485343233212435",
+          "key": "STS-187736",
+          "name": "[AUTH] Исключить из состава дистрибутива AUTH компонент KCSE",
+          "task_kind": "bug",
+          "issue_type": "bug_kb_sts",
+          "link": "https://portal.works.prod.sbt/swtr/units/current/unit/STS-187736",
+          "components": [
+            "AUTH"
+          ],
+          "counterpart": null,
+          "bug_codes": null,
+          "sigma_origin": null,
+          "tech_debt": null,
+          "deviation_type": null,
+          "defect_type": null,
+          "source": "tasktracker"
+        }
+      ],
+      "cve": []
+    }
+  }
+}

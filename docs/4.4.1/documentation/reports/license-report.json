@@ -1,0 +1,4078 @@
+{
+  "libs": [
+    {
+      "name": "org.bouncycastle:bcprov-jdk18on:1.78.1",
+      "version": "",
+      "type": "Bouncy Castle Licence",
+      "licence_url": "https://www.bouncycastle.org/licence.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-spi-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-datasource-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx-http-deployment-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-logging-json-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-hibernate-validator-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-arc-test-supplement:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive-processor:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-server-spi-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.mvnpm:importmap:1.0.10",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-jackson-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jdbc-h2-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-security-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-context-propagation-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-logging-gelf-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-health-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-agroal-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jdbc-mariadb-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-micrometer-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.http:quarkus-http-http-core:5.2.2.Final",
+      "version": "",
+      "type": "Apache License Version 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-panache-common:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-micrometer-registry-prometheus-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-open-api-core:3.10.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-jackson-common-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-health-ui:4.1.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-context-propagation-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-bootstrap-app-model:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-kubernetes-service-binding-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.gizmo:gizmo:1.7.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.arc:arc-processor:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-class-change-agent:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-builder:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jaxrs-spi-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.http:quarkus-http-core:5.2.2.Final",
+      "version": "",
+      "type": "Apache License Version 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-narayana-jta-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.aesh:readline:2.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jackson-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-netty-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.graalvm.sdk:word:23.1.2",
+      "version": "",
+      "type": "Universal Permissive License, Version 1.0",
+      "licence_url": "http://opensource.org/licenses/UPL",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-devtools-utilities:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx-http-dev-ui-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-credentials-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-kubernetes-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-panache-hibernate-common-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-virtual-threads-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jackson-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.microprofile.openapi:microprofile-openapi-api:3.1.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jdbc-postgresql-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-health-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-hibernate-orm-deployment-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-arc-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-undertow-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.servlet:jakarta.servlet-api:6.0.0",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-datasource-deployment-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.qute:qute-core:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jsonp-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-mutiny-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-common-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-openapi-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.http:quarkus-http-servlet:5.2.2.Final",
+      "version": "",
+      "type": "Apache License Version 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.aesh:aesh:2.7",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-bootstrap-core:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive-common-processor:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-caffeine-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-panache-hibernate-common:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "public.org.fusesource.jansi:jansi:2.4.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx-http-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.graalvm.sdk:nativeimage:23.1.2",
+      "version": "",
+      "type": "Universal Permissive License, Version 1.0",
+      "licence_url": "http://opensource.org/licenses/UPL",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-panache-common-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-common-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-reactive-routes-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-agroal-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-core-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-hibernate-orm-deployment:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-mutiny:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-permission:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-health:4.1.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.reactivex.rxjava3:rxjava:3.1.9",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-x500-cert:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.keycloak:keycloak-admin-ui:24.0.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-transport-native-unix-common:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.logging:commons-logging-jboss-logging:1.0.0.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan:infinispan-commons-jakarta:14.0.31.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-resolver-dns:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan:infinispan-client-hotrod-jakarta:14.0.31.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "net.java.dev.jna:jna:5.8.0",
+      "version": "",
+      "type": "LGPL, version 2.1",
+      "licence_url": "http://www.gnu.org/licenses/licenses.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jackson:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:xsom:2.3.3-b02",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exception",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient:0.16.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "public.org.apache.httpcomponents:httpclient:4.5.14",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.snakeyaml:snakeyaml-engine:2.6",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-http2:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-core:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml:classmate:1.6.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-micrometer:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-fs-util:0.0.10",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.inject:jakarta.inject-api:2.0.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.james:apache-mime4j-core:0.8.11",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "public.org.ow2.asm:asm:9.6",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-health-api:4.1.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.agroal:agroal-api:2.3",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-core:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.vertx:vertx-web:4.5.7",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-http:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.xerial.snappy:snappy-java:1.1.10.5",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-xjc:4.0.3",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.config:smallrye-config:3.5.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-uri-template:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.kerby:kerby-asn1:2.0.3",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-asn1:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.hdrhistogram:HdrHistogram:2.1.12",
+      "version": "",
+      "type": "Public Domain, per Creative Commons CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.slf4j:slf4j-jboss-logmanager:2.0.0.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-haproxy:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.istack:istack-commons-tools:3.0.12",
+      "version": "",
+      "type": "BSD 3-Clause",
+      "licence_url": "https://github.com/dom4j/dom4j/blob/master/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-databind:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:mutiny-zero-flow-adapters:1.0.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-jackson-common:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.agroal:agroal-narayana:2.3",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-client:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.ws.rs:jakarta.ws.rs-api:3.1.0",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "http://www.opensource.org/licenses/bsd-license.php",
+      "code_url": ""
+    },
+    {
+      "name": "org.bouncycastle:bcpkix-jdk18on:1.78.1",
+      "version": "",
+      "type": "Bouncy Castle Licence",
+      "licence_url": "https://www.bouncycastle.org/licence.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.hibernate.common:hibernate-commons-annotations:6.0.6.Final",
+      "version": "",
+      "type": "GNU Library General Public License v2.1 or later",
+      "licence_url": "http://www.opensource.org/licenses/LGPL-2.1",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-runtime:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.angus:angus-activation:2.0.1",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.slf4j:slf4j-api:2.0.6",
+      "version": "",
+      "type": "MIT License",
+      "licence_url": "http://www.opensource.org/licenses/mit-license.php",
+      "code_url": ""
+    },
+    {
+      "name": "com.apicatalog:titanium-json-ld:1.3.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.istack:istack-commons-runtime:3.0.12",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-util:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "javax.xml.bind:jaxb-api:2.3.1",
+      "version": "",
+      "type": "CDDL 1.1",
+      "licence_url": "https://oss.oracle.com/licenses/CDDL+GPL-1.1",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:vertx-mutiny-generator:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-context-propagation:2.1.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.config:smallrye-config-core:3.5.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.james:apache-mime4j-dom:0.8.11",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.java-json-tools:btf:1.3",
+      "version": "",
+      "type": "Lesser General Public License, version 3 or greater",
+      "licence_url": "http://www.gnu.org/licenses/lgpl.html",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.interceptor:jakarta.interceptor-api:2.1.0",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.keycloak:keycloak-themes:24.0.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-bridge-common:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.openjdk.nashorn:nashorn-core:15.4",
+      "version": "",
+      "type": "GPL v2 with the Classpath exception",
+      "licence_url": "https://github.com/openjdk/nashorn/blob/main/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.ua-parser:uap-java:1.5.4",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.narayana.jta:narayana-jta:7.0.0.Final",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api:3.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-auth-common:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-client-api:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-netty:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.annotation.jakarta:annotation-api:2.1.1",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.narayana.jts:narayana-jts-integration:7.0.0.Final",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-annotations:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-handler:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-logging-gelf:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-gssapi:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.setl:rdf-urdna:1.1",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-datasource-common:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.microprofile.config:microprofile-config-api:3.0.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.persistence:jakarta.persistence-api:3.1.0",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.resource:jakarta.resource-api:2.1.0",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-keystore:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan:infinispan-core-jakarta:14.0.31.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.xml.messaging.saaj:saaj-impl:3.0.0",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-core:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-buffer:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.liquibase:liquibase-core:4.25.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.ben-manes.caffeine:caffeine:3.1.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-resolver:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.vertx:vertx-codegen:4.5.7",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-classloader:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.freemarker:freemarker:2.3.32",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-plain:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.java-json-tools:json-patch:1.13",
+      "version": "",
+      "type": "Lesser General Public License, version 3 or greater",
+      "licence_url": "http://www.gnu.org/licenses/lgpl.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.squareup:protoparser:4.0.3",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "biz.paluch.logging:logstash-gelf:1.15.1",
+      "version": "",
+      "type": "MIT License",
+      "licence_url": "http://www.opensource.org/licenses/mit-license.php",
+      "code_url": ""
+    },
+    {
+      "name": "org.hibernate.orm:hibernate-graalvm:6.4.8.Final",
+      "version": "",
+      "type": "GNU Library General Public License v2.1 or later",
+      "licence_url": "https://www.opensource.org/licenses/LGPL-2.1",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.lz4:lz4-java:1.8.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.yaml:snakeyaml:2.2",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:1.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.twitter4j:twitter4j-core:4.1.2",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.config:smallrye-config-source-keystore:3.5.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.micrometer:micrometer-observation:1.12.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.opencsv:opencsv:5.8",
+      "version": "",
+      "type": "Apache 2",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-jaxb-provider:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan:infinispan-cachestore-remote:14.0.31.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.santuario:xmlsec:3.0.3",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.kafka:kafka-clients:3.8.0",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-core-spi:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.ow2.asm:asm-util:9.6",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.webauthn4j:webauthn4j-util:0.21.5.RELEASE",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/license/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-oauth2:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-virtual-threads:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-reactive-converter-api:3.0.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.marshalling:jboss-marshalling-river:2.0.11.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.el:jakarta.el-api:5.0.1",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exceptio",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-jackson:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.james:apache-mime4j-storage:0.8.11",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:txw2:4.0.4",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.commons:commons-lang3:3.14.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:mutiny:2.5.8",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "p6spy:p6spy:3.9.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-jackson2-provider:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.validation.jakarta:validation-api:3.0.2",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-handler-proxy:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jdbc-h2:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.vertx:vertx-bridge-common:4.5.7",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-io:commons-io:2.15.1",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-micrometer-registry-prometheus:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-mechanism-gssapi:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.ow2.asm:asm-analysis:9.6",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-scram:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-mechanism:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-web:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-auth:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.latencyutils:LatencyUtils:2.0.3",
+      "version": "",
+      "type": "Public Domain, per Creative Commons CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "code_url": ""
+    },
+    {
+      "name": "org.json:json:20240303",
+      "version": "",
+      "type": "Public Domain",
+      "licence_url": "https://github.com/stleary/JSON-java/blob/master/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan.protostream:protostream-types:4.6.5.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.keycloak:keycloak-js-adapter-jar:24.0.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.logging:jboss-logging-annotations:2.2.1.Final",
+      "version": "",
+      "type": "Apache License, version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-caffeine:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive-vertx:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.jvnet.staxex:stax-ex:2.1.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.java-json-tools:jackson-coreutils:2.0",
+      "version": "",
+      "type": "Lesser General Public License, version 3 or greater",
+      "licence_url": "http://www.gnu.org/licenses/lgpl.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive-jackson:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-context-propagation-api:2.1.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.zxing:core:3.4.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.mail:jakarta.mail-api:2.1.2",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jdbc-postgresql:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-password-impl:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.commons:commons-collections4:4.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.security:quarkus-security:2.0.3.Final",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-reactive-converter-mutiny:3.0.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_tracer_common:0.16.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-transaction-annotations:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.config:smallrye-config-common:3.5.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-codec:commons-codec:1.16.1",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.ow2.asm:asm-commons:9.6",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-core:4.0.4",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.xml.bind.external:relaxng-datatype:4.0.3",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.reactivestreams:reactive-streams:1.0.4",
+      "version": "",
+      "type": "MIT-0",
+      "licence_url": "https://spdx.org/licenses/MIT-0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.common:wildfly-common:1.5.4.Final-format-001",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.java-json-tools:msg-simple:1.2",
+      "version": "",
+      "type": "Lesser General Public License, version 3 or greater",
+      "licence_url": "http://www.gnu.org/licenses/lgpl.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.ow2.asm:asm-tree:9.6",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-credential:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:jandex:3.1.6",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.vertx:vertx-auth-common:4.5.7",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.threads:jboss-threads:3.5.1.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "net.java.dev.jna:jna-platform:5.8.0",
+      "version": "",
+      "type": "LGPL, version 2.1",
+      "licence_url": "http://www.gnu.org/licenses/licenses.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.micrometer:micrometer-commons:1.12.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-http:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.angus:angus-mail:2.0.1",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:codemodel:4.0.3",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-agroal:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.micrometer:micrometer-registry-prometheus:1.12.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.vertx:vertx-web-common:4.5.7",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-arc:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:mutiny-smallrye-context-propagation:2.5.8",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-x500-cert-util:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.xml.bind.external:rngom:2.3.3-b02",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exception",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-context-propagation-storage:2.1.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive-common:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-fault-tolerance-vertx:6.2.6",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-mechanism-oauth2:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.locationtech.jts:jts-core:1.17.0",
+      "version": "",
+      "type": "GNU General Public License v3.0",
+      "licence_url": "https://opensource.org/license/gpl-3-0",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-gs2:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-dns:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan:infinispan-jboss-marshalling:14.0.31.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-security-manager-action:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jsonp:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.hibernate.orm:hibernate-core:6.4.8.Final",
+      "version": "",
+      "type": "GNU Library General Public License v2.1 or later",
+      "licence_url": "https://www.opensource.org/licenses/LGPL-2.1",
+      "code_url": ""
+    },
+    {
+      "name": "io.vertx:vertx-core:4.5.7",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-context-propagation-jta:2.1.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss:jboss-transaction-spi:8.0.0.Final",
+      "version": "",
+      "type": "Public Domain",
+      "licence_url": "http://repository.jboss.org/licenses/cc0-1.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.keycloak:keycloak-account-ui:24.0.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-credentials:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-context-propagation:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "public.org.apache.commons:commons-text:1.11.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye:smallrye-health-provided-checks:4.1.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-core:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.luben:zstd-jni:1.5.6-3",
+      "version": "",
+      "type": "BSD 2-Clause License",
+      "licence_url": "https://opensource.org/licenses/BSD-2-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-annotation:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.activation:jakarta.activation-api:2.1.2",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_tracer_otel:0.16.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-runtime:4.0.4",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-vertx-context:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-socks:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.xml.bind:jakarta.xml.bind-api:4.0.1",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://asm.ow2.io/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-hibernate-orm:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.antlr:antlr4-runtime:4.13.0",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://www.antlr.org/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.javassist:javassist:3.29.1-GA",
+      "version": "",
+      "type": "MPL 1.1",
+      "licence_url": "http://www.mozilla.org/MPL/MPL-1.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.invocation:jboss-invocation:2.0.0.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20220608.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jgroups:jgroups:5.2.28.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.bouncycastle:bcutil-jdk18on:1.78.1",
+      "version": "",
+      "type": "Bouncy Castle Licence",
+      "licence_url": "https://www.bouncycastle.org/licence.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-jxc:4.0.3",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "org.postgresql:postgresql:42.7.2",
+      "version": "",
+      "type": "BSD-2-Clause",
+      "licence_url": "https://jdbc.postgresql.org/about/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-security-runtime-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-mechanism-scram:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.webauthn4j:webauthn4j-core:0.21.5.RELEASE",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/license/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-reactive-routes:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.infinispan.protostream:protostream:4.6.5.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.transaction:jakarta.transaction-api:2.0.1",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.xml.soap:jakarta.xml.soap-api:3.0.0",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "net.bytebuddy:byte-buddy:1.14.11",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.hibernate:quarkus-local-cache:0.3.0",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.zxing:javase:3.4.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-transport-classes-epoll:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-digest:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.micrometer:micrometer-core:1.12.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.module:jackson-module-parameter-names:2.17.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-base:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-mechanism-digest:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-ssl:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.arc:arc:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-resteasy-reactive-common:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_common:0.16.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-auth-server:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_tracer_otel_agent:0.16.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-multipart-provider:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-jdbc-mariadb:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "info.picocli:picocli:4.7.5",
+      "version": "",
+      "type": "The Apache Software License, version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.marshalling:jboss-marshalling:2.0.11.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-transport:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-logging-json:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.guava:guava:33.0.0-jre",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.microprofile.health:microprofile-health-api:4.0.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.waffle:waffle-jna:3.3.0",
+      "version": "",
+      "type": "MIT",
+      "licence_url": "https://raw.github.com/Waffle/waffle/master/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-narayana-jta:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.enterprise:jakarta.enterprise.lang-model:4.0.1",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-common:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-sasl-external:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-provider-util:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec:4.1.108.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.reactive:smallrye-mutiny-vertx-web-common:3.11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.wildfly.security:wildfly-elytron-x500:2.2.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.resteasy:resteasy-undertow:6.2.7.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "public.org.apache.httpcomponents:httpcore:4.4.16",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx-http:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-datasource:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.mariadb.jdbc:mariadb-java-client:3.3.3",
+      "version": "",
+      "type": "LGPL-2.1",
+      "licence_url": "https://opensource.org/license/lgpl-2-1",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-smallrye-health:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus.resteasy.reactive:resteasy-reactive-common-types:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.logmanager:jboss-logmanager:3.0.6.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.eclipse.parsson:parsson:1.1.5",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exception",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-io:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.json:jakarta.json-api:2.1.3",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exception",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-cpu:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-function:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.crac:org-crac:0.1.3",
+      "version": "",
+      "type": "BSD-2-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-2-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-vertx-latebound-mdc-provider:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.logging:jboss-logging:3.5.3.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://repository.jboss.org/licenses/apache-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-expression:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-bootstrap-runner:3.8.5",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-ref:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-os:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.quarkus:quarkus-development-mode-spi:3.8.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-constraint:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.smallrye.common:smallrye-common-net:2.2.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.xml.ws:policy:4.0.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.grpc:grpc-protobuf-lite:1.62.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.xml.stream.buffer:streambuffer:2.1.0",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.code.gson:gson:2.8.9",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.perfmark:perfmark-api:0.26.0",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.xml.ws:jakarta.xml.ws-api:4.0.0",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.gmbal:gmbal-api-only:4.0.3",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.grpc:grpc-stub:1.62.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.projectlombok:lombok:1.18.26",
+      "version": "",
+      "type": "The MIT License",
+      "licence_url": "https://projectlombok.org/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.guava:failureaccess:1.0.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.xml.ws:rt:4.0.1",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.grpc:grpc-netty-shaded:1.62.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish:jakarta.json:1.1.6",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exception",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "commons-lang:commons-lang:2.6",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_pushgateway:0.16.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.grpc:grpc-api:1.62.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.grpc:grpc-core:1.62.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.guava:guava:32.1.3-jre",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.protobuf:protobuf-java:3.25.5",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.grpc:grpc-protobuf:1.62.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://opensource.org/licenses/Apache-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.globalreachtech:tinyradius-netty:2.0.0",
+      "version": "",
+      "type": "GNU Lesser General Public License, version 2.1",
+      "licence_url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "commons-logging:commons-logging:1.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-core:2.20.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-api:2.20.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.openfeign:feign-httpclient:12.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.codehaus.jackson:jackson-mapper-asl:1.9.14.jdk17-redhat-00001",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.kafka:kafka-clients:3.7.0",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.openfeign:feign-core:12.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.codehaus.jackson:jackson-core-asl:1.9.13",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.dropwizard.metrics:metrics-core:4.2.22",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.luben:zstd-jni:1.3.5-4",
+      "version": "",
+      "type": "BSD 2-Clause License",
+      "licence_url": "https://opensource.org/licenses/BSD-2-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "javax.persistence:javax.persistence-api:2.2",
+      "version": "",
+      "type": "GNU General Public License, version 2 with the GNU Classpath Exception",
+      "licence_url": "https://www.gnu.org/software/classpath/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.protobuf:protobuf-java:3.25.1",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.code.gson:gson:2.11.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.re2j:re2j:1.2",
+      "version": "",
+      "type": "Go License",
+      "licence_url": "https://golang.org/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "commons-net:commons-net:3.9.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-logging:commons-logging:1.3.3",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.hubspot.jinjava:jinjava:2.7.2",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "https://github.com/HubSpot/jinjava/blob/master/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "com.googlecode.java-ipv6:java-ipv6:0.17",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.errorprone:error_prone_annotations:2.27.0",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "ch.obermuhlner:big-math:2.0.0",
+      "version": "",
+      "type": "MIT License",
+      "licence_url": "https://raw.githubusercontent.com/eobermuhlner/big-math/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.checkerframework:checker-qual:3.33.0",
+      "version": "",
+      "type": "The MIT License",
+      "licence_url": "http://opensource.org/licenses/MIT",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.guava:guava:32.0.1-jre",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.slf4j:slf4j-api:1.7.36",
+      "version": "",
+      "type": "MIT License",
+      "licence_url": "http://www.opensource.org/licenses/mit-license.php",
+      "code_url": ""
+    },
+    {
+      "name": "org.javassist:javassist:3.24.1-GA",
+      "version": "",
+      "type": "MPL 1.1",
+      "licence_url": "http://www.mozilla.org/MPL/MPL-1.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "net.logstash.logback:logstash-logback-encoder:7.0.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "commons-codec:commons-codec:1.11",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-io:commons-io:2.11.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "ch.qos.logback:logback-core:1.2.13",
+      "version": "",
+      "type": "GNU Lesser General Public License",
+      "licence_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.code.findbugs:annotations:3.0.1",
+      "version": "",
+      "type": "GNU Lesser Public License",
+      "licence_url": "http://www.gnu.org/licenses/lgpl.html",
+      "code_url": ""
+    },
+    {
+      "name": "net.bytebuddy:byte-buddy:1.14.9",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.j2objc:j2objc-annotations:2.8",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.code.findbugs:jsr305:3.0.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.boot:spring-boot-jarmode-layertools:2.7.18",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "ch.qos.logback:logback-classic:1.2.13",
+      "version": "",
+      "type": "GNU Lesser General Public License",
+      "licence_url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-context:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-transport:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.slf4j:jul-to-slf4j:1.7.36",
+      "version": "",
+      "type": "MIT License",
+      "licence_url": "http://www.opensource.org/licenses/mit-license.php",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.commons:commons-collections4:4.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-transport-classes-epoll:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-expression:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.dom4j:dom4j:2.1.3",
+      "version": "",
+      "type": "BSD 3-clause New License",
+      "licence_url": "https://github.com/dom4j/dom4j/blob/master/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.uuid:java-uuid-generator:4.0.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.junit.platform:junit-platform-commons:1.8.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-dns:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.opengis.cite.xerces:xercesImpl-xsd11:2.12-beta-r1667115",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-tcnative-boringssl-static:2.0.65.Final",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.slf4j:jcl-over-slf4j:1.7.36",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-web:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.netflix.hystrix:hystrix-core:1.5.18",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib:1.6.21",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.sun.activation:jakarta.activation:1.2.2",
+      "version": "",
+      "type": "EDL 1.0",
+      "licence_url": "http://www.eclipse.org/org/documents/edl-v10.php",
+      "code_url": ""
+    },
+    {
+      "name": "org.postgresql:postgresql:42.5.6",
+      "version": "",
+      "type": "BSD-2-Clause",
+      "licence_url": "https://jdbc.postgresql.org/about/license.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.projectreactor:reactor-core:3.6.8",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-messaging:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.unbescape:unbescape:1.1.6.RELEASE",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:txw2:2.3.9",
+      "version": "",
+      "type": "GPL2 w/ CPE",
+      "licence_url": "http://www.opensource.org/licenses/bsd-license.php",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_common:0.15.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-core:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.curator:curator-client:5.4.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.hamcrest:hamcrest-core:2.2",
+      "version": "",
+      "type": "BSD License 3",
+      "licence_url": "http://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "org.rocksdb:rocksdbjni:6.22.1.1",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.junit.platform:junit-platform-engine:1.8.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "ognl:ognl:3.3.4",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "junit:junit:4.13.2",
+      "version": "",
+      "type": "Eclipse Public License 1.0",
+      "licence_url": "http://www.eclipse.org/legal/epl-v10.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.code-intelligence:jazzer-api:0.22.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.esotericsoftware.kryo:kryo5:5.3.0",
+      "version": "",
+      "type": "3-Clause BSD License",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient:0.15.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-circuitbreaker:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.hamcrest:hamcrest:2.2",
+      "version": "",
+      "type": "BSD License 3",
+      "licence_url": "http://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "org.cache2k:cache2k-core:2.6.1.Final",
+      "version": "",
+      "type": "Apache 2",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.boot:spring-boot-actuator:2.7.18",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.boot:spring-boot-autoconfigure:2.7.18",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-resolver-dns-classes-macos:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.opengis.cite.eclipse.webtools.sse:org.eclipse.wst.xml.xpath2.processor:1.1.5-738bb7b85d",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_tracer_otel:0.15.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-handler:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-webflux:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-resolver-dns:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.yetus:audience-annotations:0.12.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-codec:commons-codec:1.15",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-collections:commons-collections:3.2.2",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.projectreactor.netty:reactor-netty-core:1.1.21",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.code-intelligence:jazzer:0.22.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jboss.logging:jboss-logging:3.4.3.Final",
+      "version": "",
+      "type": "Apache License, version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.tomcat:tomcat-annotations-api:9.0.83",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-tx:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-core:2.3.0",
+      "version": "",
+      "type": "CDDL+GPL License",
+      "licence_url": "http://glassfish.java.net/public/CDDL+GPL_1_1.html",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.luben:zstd-jni:1.5.6-4",
+      "version": "",
+      "type": "BSD 2-Clause License",
+      "licence_url": "https://opensource.org/licenses/BSD-2-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-core:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.httpcomponents:httpcore-nio:4.4.16",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.code:gson:2.9.1",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-retry:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-buffer:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.activation:jakarta.activation-api:1.2.2",
+      "version": "",
+      "type": "EDL 1.0",
+      "licence_url": "http://www.eclipse.org/org/documents/edl-v10.php",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-ratelimiter:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "edu.princeton.cup:java-cup:10k",
+      "version": "",
+      "type": "CUP Parser Generator Copyright Notice, License, and Disclaimer",
+      "licence_url": "http://www.cs.princeton.edu/~appel/modern/java/CUP/",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.annotation:jakarta.annotation-api:1.3.5",
+      "version": "",
+      "type": "EPL 2.0",
+      "licence_url": "http://www.eclipse.org/legal/epl-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.vavr:vavr:0.10.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.boot:spring-boot-actuator-autoconfigure:2.7.18",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-tcnative-classes:2.0.65.Final",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-handler-proxy:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "net.iharder:base64:2.3.9",
+      "version": "",
+      "type": "Public domain",
+      "licence_url": "http://repository.jboss.org/licenses/cc0-1.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.github.briandilley.jsonrpc4j:jsonrpc4j:1.6",
+      "version": "",
+      "type": "The MIT License (MIT)",
+      "licence_url": "https://github.com/briandilley/jsonrpc4j/blob/develop/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.kafka:kafka-clients:3.9.0",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.validation:jakarta.validation-api:2.0.2",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-all:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jetbrains:kotlin-stdlib-jdk8:1.6.21",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.netflix.archaius:archaius-core:0.4.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-http:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_tracer_common:0.15.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.mchange:c3p0:0.9.5.5",
+      "version": "",
+      "type": "GNU Lesser General Public License, Version 2.1",
+      "licence_url": "http://www.gnu.org/licenses/lgpl-2.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.junit.jupiter:junit-jupiter-params:5.8.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "javax.cache:cache-api:1.1.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.opentest4j:opentest4j:1.2.0",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.vavr:vavr-match:0.10.2",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.prometheus:simpleclient_tracer_otel_agent:0.15.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.openfeign:feign-core:11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apiguardian:apiguardian-api:1.1.2",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-common:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.tomcat.embed:tomcat-embed-websocket:9.0.90",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.bitbucket.b_c:jose4j:0.9.3",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-socks:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-transport-native-unix-common:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.zookeeper:zookeeper:3.9.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.curator:curator-recipes:5.3.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.javassist:javassist:3.29.0-GA",
+      "version": "",
+      "type": "MPL 1.1",
+      "licence_url": "http://www.mozilla.org/MPL/MPL-1.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "commons-beanutils:commons-beanutils:1.9.4",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.openfeign:feign-slf4j:11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-aop:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-to-slf4j:2.23.1",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.boot:spring-boot:2.7.18",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "commons-digester:commons-digester:2.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-api:2.23.1",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "commons-validator:commons-validator:1.7",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jaxen:jaxen:1.2.0",
+      "version": "",
+      "type": "BSD License 2.0",
+      "licence_url": "https://raw.githubusercontent.com/jaxen-xpath/jaxen/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-cache:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "https://opensource.org/licenses/BSD-3-Clause",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.kafka:spring-kafka:2.9.12",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.cache2k:cache2k-api:2.6.1.Final",
+      "version": "",
+      "type": "Apache 2",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "xml-apis:xml-apis:1.4.01",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "javax.annotation:javax.annotation-api:1.3.2",
+      "version": "",
+      "type": "CDDL + GPLv2 with classpath exception",
+      "licence_url": "https://github.com/javaee/javax.annotation/blob/master/LICENSE",
+      "code_url": ""
+    },
+    {
+      "name": "io.micrometer:micrometer-core:1.9.17",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-jcl:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "javax.activation:javax.activation-api:1.2.0",
+      "version": "",
+      "type": "CDDL/GPLv2+CE",
+      "licence_url": "https://github.com/javaee/activation/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.zookeeper:zookeeper-jute:3.9.3",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jetbrains:annotations:17.0.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.googlecode.json-simple:json-simple:1.1.1",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml:classmate:1.5.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.thymeleaf:thymeleaf:3.1.2.RELEASE",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.mchange:mchange-commons-java:0.2.19",
+      "version": "",
+      "type": "GNU Lesser General Public License, Version 2.1",
+      "licence_url": "http://www.gnu.org/licenses/lgpl-2.1.html",
+      "code_url": ""
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-runtime:2.3.9",
+      "version": "",
+      "type": "BSD-3-Clause",
+      "licence_url": "http://www.eclipse.org/org/documents/edl-v10.php",
+      "code_url": ""
+    },
+    {
+      "name": "org.mapstruct:mapstruct-processor:1.4.1.Final",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-beans:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.kafka:kafka-streams:3.1.2",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-codec-http2:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.checkerframework:checker-qual:3.5.0",
+      "version": "",
+      "type": "The MIT License",
+      "licence_url": "http://opensource.org/licenses/MIT",
+      "code_url": ""
+    },
+    {
+      "name": "io.projectreactor.netty:reactor-netty-http:1.0.47",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.bettercloud:vault-java-driver:5.1.0",
+      "version": "",
+      "type": "MIT",
+      "licence_url": "https://github.com/BetterCloud/vault-java-driver/blob/master/README.md",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.commons:commons-compress:1.26.2",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework.retry:spring-retry:1.3.4",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.code-intelligence:jazzer-junit:0.22.1",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.netty:netty-resolver:4.1.111.Final",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.swagger:swagger-annotations:1.5.22",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.openfeign:feign-httpclient:11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.avro:avro:1.11.4",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.openfeign:feign-jackson:11.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.junit.platform:junit-platform-launcher:1.8.2",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "net.bytebuddy:byte-buddy:1.12.23",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.thymeleaf:thymeleaf-spring5:3.1.2.RELEASE",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.google.errorprone:error_prone_annotations:2.18.0",
+      "version": "",
+      "type": "Apache 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-timelimiter:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.attoparser:attoparser:2.0.7.RELEASE",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-oxm:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "io.micrometer:micrometer-registry-prometheus:1.9.17",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.aspectj:aspectjweaver:1.9.7",
+      "version": "",
+      "type": "Eclipse Public License - v 2.0",
+      "licence_url": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "net.sf.saxon:Saxon-HE:9.8.0-12",
+      "version": "",
+      "type": "Mozilla Public License Version 2.0",
+      "licence_url": "http://www.mozilla.org/MPL/2.0/",
+      "code_url": ""
+    },
+    {
+      "name": "commons-configuration:commons-configuration:1.8",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.reactivex:rxjava:1.3.8",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.mapstruct:mapstruct:1.4.1.Final",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.springframework:spring-webmvc:5.3.39",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.tomcat.embed:tomcat-embed-el:9.0.83",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.5",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.github.resilience4j:resilience4j-bulkhead:1.5.0",
+      "version": "",
+      "type": "Apache-2.0",
+      "licence_url": "https://github.com/resilience4j/resilience4j/blob/master/LICENSE.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21",
+      "version": "",
+      "type": "The Apache License, Version 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.curator:curator-framework:5.4.0",
+      "version": "",
+      "type": "The Apache Software License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "org.apache.commons:commons-lang3:3.12.0",
+      "version": "",
+      "type": "Apache License, Version 2.0",
+      "licence_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "code_url": ""
+    },
+    {
+      "name": "io.dropwizard.metrics5:metrics-core:5.0.0",
+      "version": "",
+      "type": "Apache License 2.0",
+      "licence_url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "code_url": ""
+    }
+  ]
+}
